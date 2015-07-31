@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var textLabel: UILabel!
+    
+    var fromPage:String!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.textLabel.text = fromPage
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
