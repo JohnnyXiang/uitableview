@@ -8,7 +8,7 @@
 
 import UIKit
 import Haneke
-class NewsTableViewController: UITableViewController {
+class NewsTableViewController: UITableViewController,NewCellDelegate {
 
     var news = [JSON]()
     let networkManager = NetworkManager()
@@ -51,24 +51,65 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellWithImage") as! NewCellWithImage
         
         let news =  self.news[indexPath.row]
-        
-        cell.newsTitle.text = news["title"].string!
-//        cell.newsTitle.sizeToFit()
-        
+        var newsHasImage = false
         if let imageUrl = news["image"].string {
             if imageUrl != "" {
-                cell.newsImage.hnk_setImageFromURL(NSURL(string: imageUrl)!)
-                cell.newsImage.clipsToBounds = true
+                if let URL = NSURL(string: news["image"].string!) {
+                    newsHasImage = true
+                }
             }
         }
-        return cell
+        
+        if newsHasImage == true {
+            let cell = self.cellForNewsWithImage(news)
+            return cell
+        } else {
+        
+            
+            let cell = self.cellForNewsWithoutImage(news)
+            
+             return cell
+           
+        
+        }
+        
+        
+       
         
         
     }
     
+    func cellForNewsWithImage(news:JSON) -> NewCellWithImage {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellWithImage") as! NewCellWithImage
+        cell.news = news
+        cell.delegate = self
+        return cell
+
+    }
+    
+    func cellForNewsWithoutImage(news:JSON) ->NewsCellWithoutImage {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellWithoutImage") as! NewsCellWithoutImage
+        
+        
+        cell.news = news
+        cell.delegate = self
+        
+        return cell
+
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let news =  self.news[indexPath.row]
+        
+        let distViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewsDetailViewController") as! NewsDetailViewController
+        
+        distViewController.news_id = news["news_id"].string
+        distViewController.news_url = news["original_link"].string
+        
+        self.navigationController?.pushViewController(distViewController, animated: true)
+    }
     
     override func  tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -82,5 +123,9 @@ class NewsTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func sourceImageTapped(news:JSON)->Void {
+        println(news)
     }
 }

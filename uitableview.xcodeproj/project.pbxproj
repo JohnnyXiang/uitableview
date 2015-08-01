@@ -22,6 +22,9 @@
 		4DB5A28C1B6AF930008C7546 /* NewCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A28B1B6AF930008C7546 /* NewCellWithImage.swift */; };
 		4DB5A29B1B6AFD68008C7546 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB5A2961B6AFD59008C7546 /* Haneke.framework */; };
 		4DB5A29C1B6AFD68008C7546 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB5A2961B6AFD59008C7546 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DB5A2AD1B6C3909008C7546 /* NewsCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A2AC1B6C3909008C7546 /* NewsCellWithoutImage.swift */; };
+		4DB5A2AF1B6C3C97008C7546 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A2AE1B6C3C97008C7546 /* NewsDetailViewController.swift */; };
+		4DB5A2B31B6C4735008C7546 /* NewCellGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A2B21B6C4735008C7546 /* NewCellGeneral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,9 @@
 		4DB5A2831B6AF447008C7546 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4DB5A28B1B6AF930008C7546 /* NewCellWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCellWithImage.swift; sourceTree = "<group>"; };
 		4DB5A28F1B6AFD59008C7546 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../../../../../../../Downloads/HanekeSwift-master 8/Haneke.xcodeproj"; sourceTree = "<group>"; };
+		4DB5A2AC1B6C3909008C7546 /* NewsCellWithoutImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCellWithoutImage.swift; sourceTree = "<group>"; };
+		4DB5A2AE1B6C3C97008C7546 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4DB5A2B21B6C4735008C7546 /* NewCellGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCellGeneral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 				4DB5A24D1B6AE5D9008C7546 /* ViewController.swift */,
 				4DB5A26D1B6AE9E9008C7546 /* SettingsTableViewController.swift */,
 				4DB5A26F1B6AF366008C7546 /* NewsTableViewController.swift */,
+				4DB5A2AE1B6C3C97008C7546 /* NewsDetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -254,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				4DB5A28B1B6AF930008C7546 /* NewCellWithImage.swift */,
+				4DB5A2AC1B6C3909008C7546 /* NewsCellWithoutImage.swift */,
+				4DB5A2B21B6C4735008C7546 /* NewCellGeneral.swift */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -434,10 +443,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB5A2841B6AF447008C7546 /* NetworkManager.swift in Sources */,
+				4DB5A2AD1B6C3909008C7546 /* NewsCellWithoutImage.swift in Sources */,
 				4DB5A2701B6AF366008C7546 /* NewsTableViewController.swift in Sources */,
 				4DB5A28C1B6AF930008C7546 /* NewCellWithImage.swift in Sources */,
 				4DB5A24E1B6AE5D9008C7546 /* ViewController.swift in Sources */,
+				4DB5A2B31B6C4735008C7546 /* NewCellGeneral.swift in Sources */,
 				4DB5A24C1B6AE5D9008C7546 /* AppDelegate.swift in Sources */,
+				4DB5A2AF1B6C3C97008C7546 /* NewsDetailViewController.swift in Sources */,
 				4DB5A2821B6AF3F6008C7546 /* SwiftyJSON.swift in Sources */,
 				4DB5A26E1B6AE9E9008C7546 /* SettingsTableViewController.swift in Sources */,
 			);
@@ -645,6 +657,7 @@
 				4DB5A2671B6AE5D9008C7546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DB5A2681B6AE5D9008C7546 /* Build configuration list for PBXNativeTarget "uitableviewTests" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +666,7 @@
 				4DB5A26A1B6AE5D9008C7546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

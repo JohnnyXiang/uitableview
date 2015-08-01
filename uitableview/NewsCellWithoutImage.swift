@@ -1,29 +1,25 @@
 //
-//  NewCellWithImage.swift
+//  NewsCellWithoutImage.swift
 //  uitableview
 //
-//  Created by Johnny Xiang on 7/30/15.
+//  Created by Johnny Xiang on 7/31/15.
 //  Copyright (c) 2015 OIT. All rights reserved.
 //
 
 import UIKit
 import Haneke
-
-class NewCellWithImage: NewCellGeneral {
-    @IBOutlet var newsImage: UIImageView!
+class NewsCellWithoutImage: NewCellGeneral {
     @IBOutlet var newsTitle: UILabel!
+    @IBOutlet var newsSummary: UILabel!
     @IBOutlet var sourceImage: UIButton!
     @IBOutlet var sourceName: UIButton!
 
     
-    @IBAction func sourceImageTapped(sender: AnyObject) {
-        self.delegate?.sourceImageTapped(self.news)
-    }
     
     override func newsDidSet() {
         self.newsTitle.text = news["title"].string!
-        self.newsImage.hnk_setImageFromURL(NSURL(string: news["image"].string!)!)
-        self.newsImage.clipsToBounds = true
+        self.newsTitle.text = news["title"].string!
+        self.newsSummary.text =  news["summary"].string!
         
         let cache = Shared.imageCache
         let URL = NSURL(string: news["source"]["icon"].string!)!
@@ -32,6 +28,7 @@ class NewCellWithImage: NewCellGeneral {
             self.sourceImage.setBackgroundImage(image, forState: UIControlState.Normal)
             self.sourceName.setTitle(self.news["source"]["name"].string!, forState: UIControlState.Normal)
         }
-
+        
     }
+
 }
