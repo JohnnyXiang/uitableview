@@ -21,17 +21,19 @@ class NewCellWithImage: NewCellGeneral {
     }
     
     override func newsDidSet() {
-        self.newsTitle.text = news["title"].string!
-        self.newsImage.hnk_setImageFromURL(NSURL(string: news["image"].string!)!)
+        self.newsTitle.text = news.getData("title")
+        self.newsImage.hnk_setImageFromURL(NSURL(string:news.getData("image"))!)
         self.newsImage.clipsToBounds = true
         
         let cache = Shared.imageCache
-        let URL = NSURL(string: news["source"]["icon"].string!)!
+        let URL = NSURL(string: news.data["source"]["icon"].string!)!
         cache.fetch(URL: URL).onSuccess { image in
             
             self.sourceImage.setBackgroundImage(image, forState: UIControlState.Normal)
-            self.sourceName.setTitle(self.news["source"]["name"].string!, forState: UIControlState.Normal)
+            self.sourceName.setTitle(self.news.data["source"]["name"].string!, forState: UIControlState.Normal)
         }
+        
+        self.newsTitle.sizeToFit()
 
     }
 }

@@ -17,17 +17,18 @@ class NewsCellWithoutImage: NewCellGeneral {
     
     
     override func newsDidSet() {
-        self.newsTitle.text = news["title"].string!
-        self.newsTitle.text = news["title"].string!
-        self.newsSummary.text =  news["summary"].string!
+        self.newsTitle.text = news.getData("title")
+        self.newsSummary.text =  news.getData("summary")
         
         let cache = Shared.imageCache
-        let URL = NSURL(string: news["source"]["icon"].string!)!
+        let URL = NSURL(string: news.data["source"]["icon"].string!)!
         cache.fetch(URL: URL).onSuccess { image in
-            
             self.sourceImage.setBackgroundImage(image, forState: UIControlState.Normal)
-            self.sourceName.setTitle(self.news["source"]["name"].string!, forState: UIControlState.Normal)
+            self.sourceName.setTitle(self.news.data["source"]["name"].string!, forState: UIControlState.Normal)
         }
+        
+        self.newsTitle.sizeToFit()
+        self.newsSummary.sizeToFit()
         
     }
 

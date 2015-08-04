@@ -9,13 +9,13 @@
 import UIKit
 import Haneke
 protocol NewCellDelegate{
-    func sourceImageTapped(news:JSON)->Void
+    func sourceImageTapped(news:Post)->Void
 }
 
 class NewCellGeneral: UITableViewCell {
     
     var delegate:NewCellDelegate?
-    var news:JSON! {
+    var news:Post! {
         didSet{
             self.newsDidSet()
         }
