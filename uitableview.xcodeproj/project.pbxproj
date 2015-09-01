@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D5DCB611B72CF7D0068FE98 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DCB601B72CF7D0068FE98 /* ImageCollectionViewController.swift */; };
+		4D5DCB681B72D1D30068FE98 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DCB671B72D1D30068FE98 /* PhotoCell.swift */; };
+		4D5DCB6C1B72D9630068FE98 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5DCB6B1B72D9630068FE98 /* PhotoDetailViewController.swift */; };
+		4DADA7BC1B742410009826C2 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADA7BB1B742410009826C2 /* MyTabBarController.swift */; };
+		4DADA7C51B7426BD009826C2 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADA7C41B7426BD009826C2 /* SettingNavigationController.swift */; };
 		4DB5A24C1B6AE5D9008C7546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A24B1B6AE5D9008C7546 /* AppDelegate.swift */; };
 		4DB5A24E1B6AE5D9008C7546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5A24D1B6AE5D9008C7546 /* ViewController.swift */; };
 		4DB5A2511B6AE5D9008C7546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5A24F1B6AE5D9008C7546 /* Main.storyboard */; };
@@ -119,6 +124,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D5DCB601B72CF7D0068FE98 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		4D5DCB671B72D1D30068FE98 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4D5DCB6B1B72D9630068FE98 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		4DADA7BB1B742410009826C2 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		4DADA7C41B7426BD009826C2 /* SettingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingNavigationController.swift; sourceTree = "<group>"; };
 		4DB5A2461B6AE5D9008C7546 /* uitableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uitableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB5A24A1B6AE5D9008C7546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB5A24B1B6AE5D9008C7546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +240,10 @@
 				4DB5A26F1B6AF366008C7546 /* NewsTableViewController.swift */,
 				4DB5A2AE1B6C3C97008C7546 /* NewsDetailViewController.swift */,
 				4DB5A2C61B703317008C7546 /* NewsListViewController.swift */,
+				4D5DCB601B72CF7D0068FE98 /* ImageCollectionViewController.swift */,
+				4D5DCB6B1B72D9630068FE98 /* PhotoDetailViewController.swift */,
+				4DADA7BB1B742410009826C2 /* MyTabBarController.swift */,
+				4DADA7C41B7426BD009826C2 /* SettingNavigationController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -272,6 +286,7 @@
 				4DB5A2AC1B6C3909008C7546 /* NewsCellWithoutImage.swift */,
 				4DB5A2B21B6C4735008C7546 /* NewCellGeneral.swift */,
 				4DB5A2C81B70365C008C7546 /* NewsCellPlain.swift */,
+				4D5DCB671B72D1D30068FE98 /* PhotoCell.swift */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -459,12 +474,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5DCB611B72CF7D0068FE98 /* ImageCollectionViewController.swift in Sources */,
+				4D5DCB681B72D1D30068FE98 /* PhotoCell.swift in Sources */,
 				4DB5A2841B6AF447008C7546 /* NetworkManager.swift in Sources */,
 				4DB5A2C31B700A05008C7546 /* Post.swift in Sources */,
+				4DADA7BC1B742410009826C2 /* MyTabBarController.swift in Sources */,
 				4DB5A2AD1B6C3909008C7546 /* NewsCellWithoutImage.swift in Sources */,
 				4DB5A2C71B703317008C7546 /* NewsListViewController.swift in Sources */,
+				4D5DCB6C1B72D9630068FE98 /* PhotoDetailViewController.swift in Sources */,
 				4DB5A2701B6AF366008C7546 /* NewsTableViewController.swift in Sources */,
 				4DB5A28C1B6AF930008C7546 /* NewCellWithImage.swift in Sources */,
+				4DADA7C51B7426BD009826C2 /* SettingNavigationController.swift in Sources */,
 				4DB5A2C91B70365C008C7546 /* NewsCellPlain.swift in Sources */,
 				4DB5A24E1B6AE5D9008C7546 /* ViewController.swift in Sources */,
 				4DB5A2B31B6C4735008C7546 /* NewCellGeneral.swift in Sources */,

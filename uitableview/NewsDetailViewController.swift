@@ -29,6 +29,8 @@ class NewsDetailViewController: UIViewController {
             self.webView.loadRequest(request)
             self.webView.scalesPageToFit =  true
         }
+        
+        self.navigationController?.navigationBarHidden = false
     }
     
     override func didReceiveMemoryWarning() {

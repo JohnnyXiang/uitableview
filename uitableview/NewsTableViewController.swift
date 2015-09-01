@@ -58,6 +58,8 @@ class NewsTableViewController: UITableViewController,NewCellDelegate {
         self.loadPosts { () -> Void in
             
         }
+        
+        self.navigationController?.navigationBarHidden = true
     }
     
     func displayAlertMessage(alertTitle:NSString, alertDescription:NSString, style: UIAlertControllerStyle =  UIAlertControllerStyle.Alert) {
@@ -118,6 +120,7 @@ class NewsTableViewController: UITableViewController,NewCellDelegate {
         distViewController.news_id = news.getData("news_id")
         distViewController.news_url = news.getData("original_link")
         
+        distViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(distViewController, animated: true)
     }
     

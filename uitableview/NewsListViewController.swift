@@ -28,10 +28,12 @@ class NewsListViewController: UIViewController, UITableViewDataSource,UITableVie
         self.tableView.contentInset = UIEdgeInsetsZero
         
         
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController?.navigationBarHidden = true
         self.loadPost()
     }
     
